@@ -1,0 +1,25 @@
+            int gecici = 0;
+            int[] sayi = new int[10];
+            for (int i = 0; i <= 9; i++)
+            {
+                Console.Write("Bir Sayı Giriniz:");
+                sayi[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            for (int k = 0; k < 9; k++)
+            {
+                for (int j = k + 1; j <= 9; j++)
+                {
+                    if (sayi[k] < sayi[j])
+                    {
+                        gecici = sayi[j];
+                        sayi[j] = sayi[k];
+                        sayi[k] = gecici;
+                    }
+                }
+            }
+            Console.WriteLine("Girilen sayıların küçükten büyüğe doğru sıralaması: ");
+            for (int a = 0; a < 10; a++)
+            {
+                Console.WriteLine(sayi[a]);
+            }
+            Console.ReadKey();
